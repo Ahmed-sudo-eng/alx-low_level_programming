@@ -3,3 +3,6 @@
     The output will be saved in the file c
 
 1-compiler: a script that compiles a C file but does not link.
+
+2-assembler: a script that generates the assembly code of a C code and save it in an output file.
+    The C file name will be saved in the variable $CFILE
