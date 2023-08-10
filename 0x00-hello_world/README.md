@@ -10,3 +10,6 @@
 3-name: a script that compiles a C file and creates an executable named cisfun.
     The C file name will be saved in the variable $CFILE
 
+4-puts.c: a C program print "Programming is like building a multilingual puzzle followed by a new line.
+
+
