@@ -1,18 +1,12 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - Entry point
- * Return: Always 0 (Success)
+ * Return: Alwayas 0 (Success)
  */
 int main(void)
 {
-	char n;
-
-	n = 97;
-	while (n <= 122)
-	{
-		putchar(n);
-		n++;
-	}
+	print_alphabet();
 	return (0);
 }
+
