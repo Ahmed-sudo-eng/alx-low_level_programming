@@ -1,4 +1,6 @@
-#include "main.h"
+#include "_putchar.c"
+
+void print_alphabet(void);
 
 /**
  * main - Entry point
@@ -10,3 +12,14 @@ int main(void)
 	return (0);
 }
 
+void print_alphabet(void)
+{
+	char n;
+	
+	n = 97;
+	while (n <= 122)
+	{
+		_putchar(n);
+		n++;
+	}
+}
