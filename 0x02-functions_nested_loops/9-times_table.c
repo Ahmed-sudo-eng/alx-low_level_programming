@@ -17,18 +17,18 @@ void times_table(void)
 	{
 		for (j = 0; j <= 9; j++)
 		{
-			 n = i * j;
-			 x = n % 10;
-			 y = (n - x) / 10;
 
-			 if (j == 0)
-			 {
-				 _putchar('0' + n);
-				 _putchar(',');
-			 }
-			 else
-			 {
-				 _putchar(' ');
+			n = i * j;
+			x = n % 10;
+			y = (n - x) / 10;
+			if (j == 0)
+			{
+				_putchar('0' + n);
+				_putchar(',');
+			}
+			else
+			{
+				_putchar(' ');
 				if (n < 10)
 				{
 					_putchar(' ');
@@ -43,7 +43,7 @@ void times_table(void)
 					continue;
 				else
 					_putchar(',');
-			 }
+			}
 		}
 		_putchar('\n');
 	}
