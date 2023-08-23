@@ -14,4 +14,4 @@
 
 7-puts_half.c: a function that prints half of a string, followed by a new line.
 
-
+8-print_array.c: a function that prints n elements of an array of integers, followed by a new line.
