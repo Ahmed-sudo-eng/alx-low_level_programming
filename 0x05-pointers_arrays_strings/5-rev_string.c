@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -9,19 +10,31 @@
 void rev_string(char *s)
 {
 	int i;
-	int j;
+	int c;
+	char r[10];
+
 
 	i = 0;
 	while (*(s + i) != '\0')
 		i++;
-	char reversed_string[i];
+	
+	printf("string len: %d\n", i);
 	i--;
-	j = 0;
-	while (i >= 0)
+
+	c = 0;
+	while (c <= i)
 	{
-		reversed_string[j] = *(s + i);
-		j++;
+		*(r + c) = *(s + i);
+		c++;
 		i--;
 	}
-	s = reversed_string;
+	
+
+	c = 0;
+	while (c <= 9)
+	{
+		*(s + c) = *(r + c);
+		c++;
+	}
+
 }
