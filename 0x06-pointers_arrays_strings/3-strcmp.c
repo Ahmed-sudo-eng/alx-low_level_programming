@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * strcmp - a function that comapres two strings
+ * _strcmp - a function that comapres two strings
  * @s1: first string
  * @s2: second string
  *
