@@ -6,8 +6,8 @@
  * @s2: second string
  *
  * Return: if s1 = s2: 0
- * 	   if s1 > s2: a number greater than zero
- * 	   if s1 < s2: a number less than zero
+ * if s1 > s2: a number greater than zero
+ * if s1 < s2: a number less than zero
  */
 int _strcmp(char *s1, char *s2)
 {
