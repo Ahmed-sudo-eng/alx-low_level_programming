@@ -27,6 +27,7 @@ int main(void)
 
 		c++;
 	}
+	printf("\b");
 	printf("\n");
 	return (0);
 }
