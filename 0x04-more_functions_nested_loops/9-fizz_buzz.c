@@ -16,7 +16,9 @@ int main(void)
 	c = 1;
 	while (c <= 100)
 	{
-		if (c % 15 == 0)
+		if (c == 100)
+			printf("Buzz");
+		else if (c % 15 == 0)
 			printf("FizzBuzz ");
 		else if (c % 3 == 0)
 			printf("Fizz ");
@@ -27,7 +29,6 @@ int main(void)
 
 		c++;
 	}
-	printf("\b");
 	printf("\n");
 	return (0);
 }
