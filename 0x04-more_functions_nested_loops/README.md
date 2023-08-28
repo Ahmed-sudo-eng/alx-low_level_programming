@@ -22,3 +22,7 @@ line.
 10-print_triangle.c: a function that prints a triangle, followed by a new line.
 
 100-prime_factor.c:  program that finds and prints the largest prime factor of the number 612852475143, followed by a new line.
+
+101-print_number.c: a function that prints an integer.
+
+
