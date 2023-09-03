@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - a program that adds positive numbers
@@ -17,12 +18,15 @@ int main(int argc, char *argv[])
 
 		for (i = 1; i < argc; i++)
 		{
-			if (*argv[i] >= 48 && *argv[i] <= 57)
-				result = result + atoi(argv[i]);
-			else
+			if (isalpha(*argv[i]))
 			{
 				puts("Error");
 				return (1);
+			}
+
+			else
+			{
+				result = result + atoi(argv[i]);
 			}
 		}
 		printf("%d\n", result);
