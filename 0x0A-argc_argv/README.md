@@ -4,3 +4,4 @@
 
 2-args.c: a program that prints all arguments it receives.
 
+3-mul.c: a program that multiplies two numbers.
