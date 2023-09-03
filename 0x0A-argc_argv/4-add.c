@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - a program that adds positive numbers
+ * @argc: Argument counter
+ * @argv: Argument vector
+ *
+ * Return: 0 upon Success and 1 in Failure
+ */
 int main(int argc, char *argv[])
 {
 	if (argc > 1)
