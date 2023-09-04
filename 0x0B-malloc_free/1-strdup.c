@@ -14,7 +14,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	dup = malloc(sizeof(*str));/* Allocating the right amount of memory */
+	dup = malloc(sizeof(*str) + 12);/* Allocating the right amount of memory */
 	if (dup == NULL)
 		return (NULL);
 	for (i = 0; str[i] != '\0'; i++)
