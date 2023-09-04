@@ -13,9 +13,9 @@ char *_strdup(char *str)
 	int len;
 	char *dup;
 
-	if (str == NULL)
+	if (str == "")
 		return (NULL);
-	for(len = 0; str[len]; len++)	/* Extracting str length into len */
+	for (len = 0; str[len]; len++)	/* Extracting str length into len */
 	dup = malloc(sizeof(str) * len);/* Allocating the right amount of memory */
 	if (dup == NULL)
 		return (NULL);
