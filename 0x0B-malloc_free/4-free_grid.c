@@ -13,6 +13,6 @@ void free_grid(int **grid, int height)
 	int width = (sizeof(grid) / height) / sizeof(int *);
 
 	for (i = 0; i < width; i++)
-		free(arr[i]);
+		free(grid[i]);
 	free(grid);
 }
