@@ -5,3 +5,5 @@
 2-str_concat.c: a function that concatenates two strings.
 
 3-alloc_grid.c: a functiont that return a pointer to a 2 dimensional array of integers
+
+4-free_grid.c: a functiont that frees a 2 dimensional grid created by alloc_grid function
