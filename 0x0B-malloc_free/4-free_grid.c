@@ -10,9 +10,8 @@
 void free_grid(int **grid, int height)
 {
 	int i;
-	int width = (sizeof(grid) / height) / sizeof(int *);
 
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 		free(grid[i]);
 	free(grid);
 }
