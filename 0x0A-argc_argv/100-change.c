@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 	if (argc == 2)
 	{
 		cents = atoi(argv[1]);
-		if (cents < 0)
+		if (cents <= 0)
 		{
 			puts("0");
 			return (0);
