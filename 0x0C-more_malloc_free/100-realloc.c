@@ -24,7 +24,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 
-	pptr = ralloc(ptr, new_size);
+	pptr = realloc(ptr, new_size);
 	if (pptr == NULL)
 		return (NULL);
 	/*pptr = ptr;*/
