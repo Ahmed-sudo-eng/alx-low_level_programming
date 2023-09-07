@@ -13,6 +13,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *str;
 
 	str = malloc(sizeof(s1) + n);
+	if (str == NULL)
+		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
 		str[i] = s1[i];
 	j = i;
