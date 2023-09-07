@@ -5,3 +5,5 @@
 2-calloc.c: a function that allocates memory for an array, using malloc.
 
 3-array_range.c: a function that creates an array of integer.
+
+100-realloc.c: a function that reallocates a memory block using malloc and free.
