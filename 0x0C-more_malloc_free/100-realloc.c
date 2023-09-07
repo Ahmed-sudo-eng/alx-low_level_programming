@@ -15,8 +15,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (ptr);
 	if (ptr == NULL)
 	{
-		ptr = malloc(new_size);
-		return (ptr);
+		pptr = malloc(new_size);
+		return (pptr);
 	}
 	if (new_size == 0 && ptr != NULL)
 	{
