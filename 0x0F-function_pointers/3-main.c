@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include "3-calc.h"
 
+/**
+ * main - Entery point
+ * @argc: Argument count
+ * @argv: Argument vector
+ *
+ * Return: O in Success
+ */
 int main(int argc, char *argv[])
 {
 	int res;
