@@ -6,7 +6,8 @@
  * operation asked by the user
  * @s: the opreator passed as argument to the program
  *
- * Return: a pointer to the function that corresponds to the opreator given as a parameter
+ * Return: a pointer to the function that corresponds to the opreator given
+ * as a parameter
  */
 int (*get_op_func(char *s))(int, int)
 {
