@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 /**
  * print_numbers - a function that print numbers, followed by a new line
@@ -23,7 +24,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		else if (i == n - 1)
 			printf("%d", num);
 		else
-			printf("%d ", num);
+			exit(0);
 	}
 	printf("\n");
 }
