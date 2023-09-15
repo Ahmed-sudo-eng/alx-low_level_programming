@@ -15,7 +15,10 @@ void print_all(const char * const format, ...)
 	int i = 0;
 
 	if (format == NULL)
+	{
+		printf("(nil)");
 		exit(0);
+	}
 	va_start(ap, format);
 	while (format[i] != '\0')
 	{
