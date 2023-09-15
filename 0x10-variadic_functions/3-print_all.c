@@ -18,17 +18,51 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c, ", va_arg(ap, int));
+				switch (format[i + 1])
+				{
+					case '\0':
+						printf("%c", va_arg(ap, int));
+						break;
+					default:
+						printf("%c, ", va_arg(ap, int));
+						break;
+				}
 				break;
 			case 'i':
-				printf("%d, ", va_arg(ap, int));
+				switch (format[i + 1])
+				{
+					case '\0':
+						printf("%d", va_arg(ap, int));
+						break;
+					default:
+						printf("%d, ", va_arg(ap, int));
+						break;
+				}
 				break;
 			case 'f':
-				printf("%f, ", va_arg(ap, double));
+				switch (format[i + 1])
+				{
+					case '\0':
+						printf("%f", va_arg(ap, double));
+						break;
+					default:
+						printf("%f, ", va_arg(ap, double));
+						break;
+				}
 				break;
 			case 's':
-				printf("%s, ", va_arg(ap, char *));
+				switch (format[i + 1])
+				{
+					case '\0':
+						printf("%s", va_arg(ap, char *));
+						break;
+					default:
+						printf("%s, ", va_arg(ap, char *));
+						break;
+				}
+				break;
 		}
 		i++;
 	}
+	printf("\n");
 }
