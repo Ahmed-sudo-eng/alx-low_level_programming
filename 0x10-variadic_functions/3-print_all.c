@@ -11,6 +11,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
+	char *string;
 	int i = 0;
 
 	va_start(ap, format);
@@ -52,7 +53,8 @@ void print_all(const char * const format, ...)
 				}
 				break;
 			case 's':
-				if (va_arg(ap, char *) == NULL)
+				string = va_arg(ap, char *);
+				if (string == NULL)
 				{
 					printf("(nil), ");
 					break;
@@ -60,10 +62,10 @@ void print_all(const char * const format, ...)
 				switch (format[i + 1])
 				{
 					case '\0':
-						printf("%s", va_arg(ap, char *));
+						printf("%s", string);
 						break;
 					default:
-						printf("%s, ", va_arg(ap, char *));
+						printf("%s, ", string);
 						break;
 				}
 				break;
