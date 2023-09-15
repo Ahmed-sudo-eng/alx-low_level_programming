@@ -1,5 +1,4 @@
 #include <stdarg.h>
-#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -14,11 +13,6 @@ void print_all(const char * const format, ...)
 	char *string;
 	int i = 0;
 
-	if (format == NULL)
-	{
-		printf("(nil)");
-		exit(0);
-	}
 	va_start(ap, format);
 	while (format[i] != '\0')
 	{
