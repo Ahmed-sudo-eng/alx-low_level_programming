@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
@@ -13,6 +14,8 @@ void print_all(const char * const format, ...)
 	int i = 0;
 
 	va_start(ap, format);
+	if (format == NULL)
+		exit(EXIT_SUCCESS);
 	while (format[i] != '\0')
 	{
 		switch (format[i])
@@ -51,6 +54,11 @@ void print_all(const char * const format, ...)
 				}
 				break;
 			case 's':
+				if (va_arg(ap, char *) == NULL)
+				{
+					printf("(nil), ");
+					break;
+				}
 				switch (format[i + 1])
 				{
 					case '\0':
