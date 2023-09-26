@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * pop_listint - a function that deletes the head node of
@@ -10,10 +11,10 @@
 int pop_listint(listint_t **head)
 {
 	int n;
-	node_t *temp = *head;
+	listint_t *temp = *head;
 
 	*head = (*head)->next;
-	n = temp->value;
+	n = temp->n;
 	free(temp);
 	return (n);
 }
