@@ -6,7 +6,7 @@
  * a listint_t linked list
  * @head: points to the list
  *
- * return: The sum of all the data (n) or (0) if the list is empty
+ * Return: The sum of all the data (n) or (0) if the list is empty
  */
 int sum_listint(listint_t *head)
 {
