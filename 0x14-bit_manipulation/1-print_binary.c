@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 		_putchar(48);
 		return;
 	}
-	i = 1 << 31;
+	i = 1 << 63;
 	while (i > 0)
 	{
 		if (n & i)
