@@ -2,6 +2,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * read_textfile - a function that reads a text file and prints it to the POSIX
@@ -15,12 +16,22 @@ int read_textfile(const char *filename, int letters)
 {
 	int fd;
 	char *buf = (char *) malloc(letters);
+	int nb_read;
+	int nb_write;
 
+	if (filename == NULL)
+		return (0);
 	fd = open(filename, O_RDONLY);
-	read(fd, buf, letters);
-	write(STDOUT_FILENO, buf, letters);
+	if (fd == -1)
+		return (0);
+	nb_read = read(fd, buf, letters);
+	if (nb_read == -1)
+		return (0);
+	nb_write = write(STDOUT_FILENO, buf, letters);
+	if (nb_write == -1)
+		return (0);
 
 	free(buf);
 	close(fd);
-	return (letters);
+	return (nb_read);
 }
