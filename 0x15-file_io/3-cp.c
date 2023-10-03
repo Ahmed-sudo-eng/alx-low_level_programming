@@ -33,6 +33,8 @@ int main(int argc, char *argv[])
 	while (read_s != 0)
 	{
 		read_s = read(fd1, buf, 1);
+		if (read_s == 0)
+			break;
 		if (fd1 == -1 || read_s == -1)
 		{
 			dprintf(2 , "Error: Can't read from file %s\n", argv[1]);
