@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * add_nodeint_end - a function that adds a new node at the end of
+ * add_dnodeint_end - a function that adds a new node at the end of
  * dlistint_t list
  * @head: double pointer that points to the address of the first node
  * @n: the value of rhe new node
