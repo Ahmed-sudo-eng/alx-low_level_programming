@@ -24,12 +24,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		newNode->n = n;
 		newNode->next = *h;
 		newNode->prev = NULL;
+		(*h)->prev = newNode;
 		*h = newNode;
 		return (newNode);
 	}
 	while (current != NULL)
 	{
-		/* the index to insert at*/
 		if (i == idx)
 		{
 			newNode->n = n;
