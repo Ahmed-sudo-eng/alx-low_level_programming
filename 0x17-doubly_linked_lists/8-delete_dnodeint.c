@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "lists.h"
 #include <stdlib.h>
 
@@ -15,14 +14,17 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *current = *head;
 	dlistint_t *nextNode = NULL;
 	dlistint_t *prevNode = NULL;
+	dlistint_t *tmp = NULL;
 	unsigned int i = 0;
 
 	if (*head == NULL)
 		return (-1);
 	if (index == 0)
 	{
+		tmp = *head;
 		*head = current->next;
 		current->prev = NULL;
+		free(tmp);
 		return (1);
 	}
 	while (i < index)
