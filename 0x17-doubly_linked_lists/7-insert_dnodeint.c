@@ -1,9 +1,8 @@
 #include "lists.h"
 #include <stdlib.h>
-
 /**
- * insert_dnodeint_at_index - a function that inserts a new node at
- * a given position
+ * insert_dnodeint_at_index - a function that inserts a new node at a given
+ * position
  * @h: double pointer the points to the first node address
  * @idx: index to insert new node at
  * @n: the value of the new node
@@ -16,22 +15,17 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *current = *h;
 	unsigned int i = 0;
 
-	if (newNode == NULL)
-		return (NULL);
+	newNode->n = n;
+	newNode->prev = NULL;
+	newNode->next = NULL;
 	if (*h == NULL)
 	{
-		newNode->n = n;
-		newNode->prev = NULL;
-		newNode->next = NULL;
 		*h = newNode;
 		return (newNode);
 	}
-	/* Insertion at the beginning */
 	if (idx == 0)
 	{
-		newNode->n = n;
 		newNode->next = *h;
-		newNode->prev = NULL;
 		(*h)->prev = newNode;
 		*h = newNode;
 		return (newNode);
@@ -40,18 +34,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		if (i == idx)
 		{
-			newNode->n = n;
 			newNode->next = current;
 			newNode->prev = current->prev;
 			current->prev->next = newNode;
 			current->prev = newNode;
 			return (newNode);
 		}
-		/* Insertion at the end */
 		if (current->next == NULL && idx == i + 1)
 		{
-			newNode->n = n;
-			newNode->next = NULL;
 			newNode->prev = current;
 			current->next = newNode;
 			return (newNode);
