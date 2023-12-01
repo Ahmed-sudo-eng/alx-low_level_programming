@@ -10,8 +10,8 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *hashtable = (hash_table_t *)malloc(sizeof(hash_table_t));
-	hash_node_t *array = (hash_node_t *)calloc(size, sizeof(hash_node_t));
+	hash_table_t *hashtable = (hash_table_t*)malloc(sizeof(hash_table_t));
+	hash_node_t *array = (hash_node_t*)calloc(size, sizeof(hash_node_t));
 
 	/* Make sure the memory was allocated succesfully */
 	if (hashtable == NULL)
