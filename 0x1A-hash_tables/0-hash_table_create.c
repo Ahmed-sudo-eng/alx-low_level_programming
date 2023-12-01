@@ -10,11 +10,11 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_node_t *array[100];
 	hash_table_t *hashtable = (hash_table_t *)malloc(sizeof(hash_table_t));
+	hash_node_t *array = (hash_node_t *)calloc(size, sizeof(hash_node_t));
 
 	hashtable->size = size;
-	hashtable->array = array;
+	hashtable->array = &array;
 
 	return (hashtable);
 }
