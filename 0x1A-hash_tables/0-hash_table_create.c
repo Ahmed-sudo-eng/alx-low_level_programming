@@ -15,9 +15,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	/* Make sure the memory was allocated succesfully */
 	if (hashtable == NULL)
-		return NULL;
+		return (NULL);
 	if (array == NULL)
-		return NULL;
+		return (NULL);
 
 	hashtable->size = size;
 	hashtable->array = &array;
