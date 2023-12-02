@@ -8,15 +8,15 @@
  *
  * Return: On Succes (1), On Failure (0)
  */
-int hash_table_set(hash_table_t *ht, const char *key, const char __attribute__((unused)) *value)
+int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx = key_index((unsigned char *) key, ht->size);
 
 	ht->array[idx] = (hash_node_t *)malloc(sizeof(hash_node_t));
 	ht->array[idx] = NULL;
-/*	ht->array[idx]->key = (char *) key;
+	ht->array[idx]->key = (char *) key;
 	ht->array[idx]->value = (char *) value;
-	ht->array[idx]->next = NULL;*/
+	ht->array[idx]->next = NULL;
 
 
 	return (1);
