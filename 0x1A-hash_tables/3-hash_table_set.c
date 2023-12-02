@@ -12,6 +12,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx = key_index((unsigned char *) key, ht->size);
 
+	if (strlen(key) == 0)
+		return (0);
+
 	ht->array[idx] = (hash_node_t *)malloc(sizeof(hash_node_t));
 	ht->array[idx]->key = (char *) key;
 	ht->array[idx]->value = (char *) value;
